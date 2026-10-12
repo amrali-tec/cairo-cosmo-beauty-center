@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- ==================== ROOT & HOMEPAGES ==================== -->
+  <url>
+    <loc>https://cairocosmo.online/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cairocosmo.online/ar"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cairocosmo.online/en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cairocosmo.online/ar"/>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://cairocosmo.online/ar</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cairocosmo.online/ar"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cairocosmo.online/en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cairocosmo.online/ar"/>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://cairocosmo.online/en</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cairocosmo.online/ar"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cairocosmo.online/en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cairocosmo.online/ar"/>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ==================== MAIN SECTION PAGES ==================== -->
+  <!-- Services Hub -->
+  <url>
+    <loc>https://cairocosmo.online/ar/services</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cairocosmo.online/ar/services"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cairocosmo.online/en/services"/>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://cairocosmo.online/en/services</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cairocosmo.online/ar/services"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cairocosmo.online/en/services"/>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Doctors Directory -->
+  <url>
+    <loc>https://cairocosmo.online/ar/doctors</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cairocosmo.online/ar/doctors"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cairocosmo.online/en/doctors"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://cairocosmo.online/en/doctors</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cairocosmo.online/ar/doctors"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cairocosmo.online/en/doctors"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Offers & Packages -->
+  <url>
+    <loc>https://cairocosmo.online/ar/offers</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cairocosmo.online/ar/offers"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cairocosmo.online/en/offers"/>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://cairocosmo.online/en/offers</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cairocosmo.online/ar/offers"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cairocosmo.online/en/offers"/>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Online Booking -->
+  <url>
+    <loc>https://cairocosmo.online/ar/book</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cairocosmo.online/ar/book"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cairocosmo.online/en/book"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://cairocosmo.online/en/book</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cairocosmo.online/ar/book"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cairocosmo.online/en/book"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog Index -->
+  <url>
+    <loc>https://cairocosmo.online/ar/blog</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cairocosmo.online/ar/blog"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cairocosmo.online/en/blog"/>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://cairocosmo.online/en/blog</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cairocosmo.online/ar/blog"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cairocosmo.online/en/blog"/>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Contact Us -->
+  <url>
+    <loc>https://cairocosmo.online/ar/contact</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cairocosmo.online/ar/contact"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cairocosmo.online/en/contact"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://cairocosmo.online/en/contact</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cairocosmo.online/ar/contact"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cairocosmo.online/en/contact"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- About Us -->
+  <url>
+    <loc>https://cairocosmo.online/ar/about</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cairocosmo.online/ar/about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cairocosmo.online/en/about"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://cairocosmo.online/en/about</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cairocosmo.online/ar/about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cairocosmo.online/en/about"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FAQ -->
+  <url>
+    <loc>https://cairocosmo.online/ar/faq</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cairocosmo.online/ar/faq"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cairocosmo.online/en/faq"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Calculator -->
+  <url>
+    <loc>https://cairocosmo.online/ar/calculator</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cairocosmo.online/ar/calculator"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cairocosmo.online/en/calculator"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ==================== INDIVIDUAL SERVICES ==================== -->
+  <url>
+    <loc>https://cairocosmo.online/ar/services/laser-hair-removal</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cairocosmo.online/ar/services/laser-hair-removal"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cairocosmo.online/en/services/laser-hair-removal"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://cairocosmo.online/en/services/laser-hair-removal</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cairocosmo.online/ar/services/laser-hair-removal"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cairocosmo.online/en/services/laser-hair-removal"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://cairocosmo.online/ar/services/botox</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cairocosmo.online/ar/services/botox"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cairocosmo.online/en/services/botox"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://cairocosmo.online/en/services/botox</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cairocosmo.online/ar/services/botox"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cairocosmo.online/en/services/botox"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://cairocosmo.online/ar/services/skin-booster</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cairocosmo.online/ar/services/skin-booster"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cairocosmo.online/en/services/skin-booster"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://cairocosmo.online/ar/services/dermapen</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cairocosmo.online/ar/services/dermapen"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cairocosmo.online/en/services/dermapen"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://cairocosmo.online/ar/services/mesotherapy</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cairocosmo.online/ar/services/mesotherapy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cairocosmo.online/en/services/mesotherapy"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://cairocosmo.online/ar/services/hifu</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cairocosmo.online/ar/services/hifu"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cairocosmo.online/en/services/hifu"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://cairocosmo.online/ar/services/hydrafacial</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cairocosmo.online/ar/services/hydrafacial"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cairocosmo.online/en/services/hydrafacial"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://cairocosmo.online/ar/services/oxygeneo</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://cairocosmo.online/ar/services/pigmentation-acne-treatment</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://cairocosmo.online/ar/services/chemical-peel</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://cairocosmo.online/ar/services/hair-loss-treatment</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://cairocosmo.online/ar/services/nutrition-consultation</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://cairocosmo.online/ar/services/mens-laser-hair-removal</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://cairocosmo.online/ar/services/mens-dermatology-consultation</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://cairocosmo.online/ar/services/mens-nutrition-consultation</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://cairocosmo.online/ar/services/skin-tag-removal</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ==================== INDIVIDUAL DOCTORS ==================== -->
+  <url>
+    <loc>https://cairocosmo.online/ar/doctors/prof-nahed-samir</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cairocosmo.online/ar/doctors/prof-nahed-samir"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cairocosmo.online/en/doctors/prof-nahed-samir"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://cairocosmo.online/en/doctors/prof-nahed-samir</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cairocosmo.online/ar/doctors/prof-nahed-samir"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cairocosmo.online/en/doctors/prof-nahed-samir"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://cairocosmo.online/ar/doctors/dr-basim-zaki</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cairocosmo.online/ar/doctors/dr-basim-zaki"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cairocosmo.online/en/doctors/dr-basim-zaki"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://cairocosmo.online/en/doctors/dr-basim-zaki</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cairocosmo.online/ar/doctors/dr-basim-zaki"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cairocosmo.online/en/doctors/dr-basim-zaki"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://cairocosmo.online/ar/doctors/prof-ahmed-el-sherif</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cairocosmo.online/ar/doctors/prof-ahmed-el-sherif"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cairocosmo.online/en/doctors/prof-ahmed-el-sherif"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ==================== BLOG POSTS ==================== -->
+  <url>
+    <loc>https://cairocosmo.online/ar/blog/botox-benefits</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cairocosmo.online/ar/blog/botox-benefits"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cairocosmo.online/en/blog/botox-benefits"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://cairocosmo.online/ar/blog/dermal-fillers-guide</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cairocosmo.online/ar/blog/dermal-fillers-guide"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cairocosmo.online/en/blog/dermal-fillers-guide"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://cairocosmo.online/ar/blog/laser-hair-removal-tips</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cairocosmo.online/ar/blog/laser-hair-removal-tips"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cairocosmo.online/en/blog/laser-hair-removal-tips"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ==================== LEGAL PAGES ==================== -->
+  <url>
+    <loc>https://cairocosmo.online/ar/privacy</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://cairocosmo.online/ar/terms</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://cairocosmo.online/ar/disclaimer</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://cairocosmo.online/ar/cookies</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+</urlset>

@@ -1,0 +1,22 @@
+# Disable Directory Indexing
+Options -Indexes
+
+# Pass Authorization Header to PHP-FPM / FastCGI
+<IfModule mod_setenvif.c>
+  SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Pass Authorization Header
+  RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+  # Deny direct access to data, core, config, underscored and hidden files
+  RewriteRule ^data(/.*)?$ - [F,L]
+  RewriteRule ^core(/.*)?$ - [F,L]
+  RewriteRule ^_.*$ - [F,L]
+  RewriteRule ^.*config.*\.php$ - [F,L]
+  RewriteRule ^\.env.*$ - [F,L]
+  RewriteRule ^test-email\.php$ - [F,L]
+</IfModule>

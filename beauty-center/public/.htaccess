@@ -1,0 +1,123 @@
+# Disable directory browsing safely
+Options -Indexes
+DirectoryIndex index.html index.php
+
+# Set correct MIME types for JavaScript, CSS, and Assets
+<IfModule mod_mime.c>
+  AddType application/javascript .js .mjs
+  AddType text/css .css
+  AddType image/webp .webp
+  AddType image/svg+xml .svg
+  AddType application/json .json
+  AddType font/woff2 .woff2
+</IfModule>
+
+# Enable GZIP / Deflate Compression
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/plain
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/xml
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE application/xml
+  AddOutputFilterByType DEFLATE application/xhtml+xml
+  AddOutputFilterByType DEFLATE application/rss+xml
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/x-javascript
+  AddOutputFilterByType DEFLATE application/json
+  AddOutputFilterByType DEFLATE image/svg+xml
+  AddOutputFilterByType DEFLATE font/woff2
+  AddOutputFilterByType DEFLATE font/woff
+</IfModule>
+
+# Pass Authorization Header to PHP-FPM / FastCGI
+<IfModule mod_setenvif.c>
+  SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1
+</IfModule>
+
+# Enable Rewrite Engine
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Pass Authorization Header
+  RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+  # 1. Permanent 301 Redirect for root domain (Fixes Google Search Console Soft 404 / Indexing)
+  RewriteRule ^$ /ar [R=301,L]
+
+  # 2. Permanent 301 Redirects for un-prefixed public URLs to Arabic default
+  RewriteRule ^services(/.*)?$ /ar/services$1 [R=301,L]
+  RewriteRule ^doctors(/.*)?$ /ar/doctors$1 [R=301,L]
+  RewriteRule ^offers(/.*)?$ /ar/offers$1 [R=301,L]
+  RewriteRule ^blog(/.*)?$ /ar/blog$1 [R=301,L]
+  RewriteRule ^contact(/.*)?$ /ar/contact$1 [R=301,L]
+  RewriteRule ^book(/.*)?$ /ar/book$1 [R=301,L]
+  RewriteRule ^about(/.*)?$ /ar/about$1 [R=301,L]
+  RewriteRule ^faq(/.*)?$ /ar/faq$1 [R=301,L]
+  RewriteRule ^calculator(/.*)?$ /ar/calculator$1 [R=301,L]
+  RewriteRule ^privacy(/.*)?$ /ar/privacy$1 [R=301,L]
+  RewriteRule ^terms(/.*)?$ /ar/terms$1 [R=301,L]
+
+  # 3. Secure sensitive backend directories & files
+  RewriteRule ^api/data(/.*)?$ - [F,L]
+  RewriteRule ^api/core(/.*)?$ - [F,L]
+  RewriteRule ^api/_.*$ - [F,L]
+  RewriteRule ^api/.*config.*\.php$ - [F,L]
+  RewriteRule ^api/\.env.*$ - [F,L]
+
+  # 4. Direct existing files and directories
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # 5. Do NOT rewrite missing static assets or images to index.html (return clean 404)
+  RewriteCond %{REQUEST_URI} \.(js|css|png|jpg|jpeg|gif|webp|svg|ico|json|woff2)$ [NC]
+  RewriteRule ^ - [R=404,L]
+
+  # 6. Route all SPA page requests to index.html
+  RewriteRule ^ index.html [L]
+</IfModule>
+
+# Browser Caching Headers
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 month"
+
+  # Images & Fonts: 1 Year (Immutable)
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+
+  # CSS & JS: 1 Year (Hashed by Vite)
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType application/x-javascript "access plus 1 year"
+
+  # HTML & Data: Short cache
+  ExpiresByType text/html "access plus 1 hour"
+  ExpiresByType application/json "access plus 0 seconds"
+</IfModule>
+
+# Security & Cache Control Headers
+<IfModule mod_headers.c>
+  # Hashed assets immutable cache
+  <FilesMatch "\.(js|css|webp|png|jpg|jpeg|svg|woff2)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+
+  # HTML & SPA router cache header
+  <FilesMatch "\.(html|htm)$">
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+  </FilesMatch>
+
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set X-XSS-Protection "1; mode=block"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>

@@ -1,0 +1,666 @@
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+  /* Cairo Cosmo Center Design System
+    Luxury Clean + Modern Medical
+    All colors in HSL format
+  */
+
+  /* =========================================================
+    1) TOKENS + THEME
+    ========================================================= */
+  @layer base {
+    /* =========================================================
+       ACTIVE DEFAULT THEME: LUXURY ROSE GOLD & GLASSMORPHISM
+       ========================================================= */
+    :root {
+      /* ---- Brand (Rose Gold & Luxury Silk) ---- */
+      --primary: 326 62% 38%;
+      --primary-foreground: 0 0% 100%;
+
+      --secondary: 326 32% 24%;
+      --secondary-foreground: 0 0% 100%;
+
+      --accent: 326 40% 82%;
+      --accent-foreground: 326 40% 18%;
+
+      /* ---- Base Surfaces (Luxury Ivory Cream) ---- */
+      --background: 330 40% 97%;
+      --foreground: 240 10% 12%;
+
+      --card: 0 0% 100%;
+      --card-foreground: 240 10% 12%;
+
+      --popover: 0 0% 100%;
+      --popover-foreground: 240 10% 12%;
+
+      /* ---- Muted / Neutral ---- */
+      --muted: 330 24% 95%;
+      --muted-foreground: 240 6% 40%;
+
+      --neutral: 240 5% 55%;
+      --neutral-foreground: 0 0% 100%;
+
+      /* ---- Destructive ---- */
+      --destructive: 0 78% 56%;
+      --destructive-foreground: 0 0% 100%;
+
+      /* ---- Borders / Inputs ---- */
+      --border: 330 22% 88%;
+      --input: 330 22% 88%;
+      --ring: 326 62% 38%;
+
+      --radius: 1.25rem;
+
+      /* ---- Gradients (Luxury Rose Gold Silk) ---- */
+      --gradient-primary: linear-gradient(
+        135deg,
+        hsl(326 68% 40%) 0%,
+        hsl(326 52% 35%) 50%,
+        hsl(326 38% 28%) 100%
+      );
+
+      --gradient-hero: linear-gradient(
+        180deg,
+        hsl(330 40% 97% / 0.95) 0%,
+        hsl(330 40% 97% / 0.75) 100%
+      );
+
+      --gradient-card: linear-gradient(
+        135deg,
+        hsl(0 0% 100% / 0.95) 0%,
+        hsl(330 35% 98% / 0.95) 100%
+      );
+
+      /* ---- Shadows (Luxury Velvet Ambient) ---- */
+      --shadow-sm: 0 2px 6px hsl(326 62% 38% / 0.04);
+      --shadow-md: 0 10px 30px -5px hsl(326 62% 38% / 0.09);
+      --shadow-lg: 0 18px 48px -8px hsl(326 62% 38% / 0.14);
+      --shadow-xl: 0 30px 80px -12px hsl(326 62% 38% / 0.18);
+    }
+
+    /* PRESERVED CLASSIC THEME BACKUP */
+    .theme-classic {
+      --primary: 326 62% 38%;
+      --background: 330 40% 97%;
+      --card: 0 0% 100%;
+      --radius: 0.85rem;
+    }
+
+    .dark {
+      /* ---- Dark Luxury Charcoal & Rose Gold Glow ---- */
+      --background: 240 12% 6%;
+      --foreground: 0 0% 96%;
+
+      --card: 240 12% 9%;
+      --card-foreground: 0 0% 96%;
+
+      --popover: 240 12% 9%;
+      --popover-foreground: 0 0% 96%;
+
+      --primary: 326 78% 60%;
+      --primary-foreground: 0 0% 100%;
+
+      --secondary: 240 10% 16%;
+      --secondary-foreground: 0 0% 96%;
+
+      --accent: 326 34% 28%;
+      --accent-foreground: 0 0% 96%;
+
+      --muted: 240 10% 14%;
+      --muted-foreground: 240 6% 72%;
+
+      --border: 240 10% 16%;
+      --input: 240 10% 18%;
+      --ring: 326 78% 60%;
+    }
+  }
+
+  /* =========================================================
+    2) GLOBAL BASE + TYPOGRAPHY (BIGGER + LUXURY)
+    - Fluid typography (responsive تلقائي)
+    - Arabic tuned (line-height + weight)
+    ========================================================= */
+  @layer base {
+    * {
+      @apply border-border;
+    }
+
+    html {
+      scroll-behavior: smooth;
+
+      /* ✅ Fluid base font size:
+        - mobile ~16.25px
+        - desktop ~18px
+        بدون ما يبوظ الـ UI */
+      font-size: clamp(16.25px, 0.6vw + 15.5px, 18px);
+
+      /* smoother text */
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      @apply bg-background text-foreground antialiased;
+
+      /* ✅ Cairo everywhere */
+      font-family:
+        "Cairo",
+        system-ui,
+        -apple-system,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+
+      line-height: 1.75;
+      font-weight: 400;
+      letter-spacing: 0;
+    }
+
+    /* Arabic reading feel (slightly more breathable) */
+    [dir="rtl"] body {
+      line-height: 1.82;
+      font-weight: 400;
+    }
+
+    /* Headings: premium rhythm */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @apply font-semibold tracking-tight;
+      line-height: 1.15;
+    }
+
+    /* ✅ Better paragraphs by default */
+    p {
+      font-size: 1.04rem;
+      line-height: 1.85;
+    }
+
+    /* ✅ Global small text (meta/badges) */
+    small {
+      font-size: 0.86rem;
+      line-height: 1.55;
+    }
+
+    /* =======================================================
+      Tailwind text utilities (slight upscale)
+      This keeps your existing classnames but makes them bigger
+      ======================================================= */
+    .text-xs {
+      font-size: 0.86rem;
+      line-height: 1.45;
+    }
+
+    .text-sm {
+      font-size: 0.96rem;
+      line-height: 1.55;
+    }
+
+    .text-base {
+      font-size: 1.06rem;
+      line-height: 1.7;
+    }
+
+    .text-lg {
+      font-size: 1.22rem;
+      line-height: 1.7;
+    }
+
+    .text-xl {
+      font-size: 1.42rem;
+      line-height: 1.5;
+    }
+
+    .text-2xl {
+      font-size: 1.75rem;
+      line-height: 1.35;
+    }
+
+    .text-3xl {
+      font-size: 2.18rem;
+      line-height: 1.25;
+    }
+
+    .text-4xl {
+      font-size: 2.75rem;
+      line-height: 1.15;
+    }
+
+    .text-5xl {
+      font-size: 3.35rem;
+      line-height: 1.05;
+    }
+
+    /* =======================================================
+      BLOG / LONG CONTENT ONLY (bigger without affecting UI)
+      Put class "prose-lux" on blog container
+      ======================================================= */
+    .prose-lux {
+      font-size: 1.08rem;
+      line-height: 1.95;
+    }
+
+    .prose-lux h2 {
+      font-size: 1.85rem;
+      margin-top: 1.7em;
+      margin-bottom: 0.6em;
+    }
+
+    .prose-lux h3 {
+      font-size: 1.45rem;
+      margin-top: 1.3em;
+      margin-bottom: 0.5em;
+    }
+
+    .prose-lux p {
+      font-size: 1.08rem;
+      line-height: 1.95;
+      margin: 0.85em 0;
+    }
+
+    .prose-lux li {
+      margin: 0.35em 0;
+    }
+  }
+
+  /* =========================================================
+    3) COMPONENTS (luxury surfaces + buttons)
+    ========================================================= */
+  @layer components {
+    .hero-gradient {
+      background: var(--gradient-hero);
+    }
+
+    /* ✅ Premium Glass Panel (balanced for both modes) */
+    .glass-panel {
+      @apply border;
+      border-color: hsl(var(--border) / 0.55);
+      background: hsl(var(--card) / 0.62);
+      backdrop-filter: blur(18px) saturate(140%);
+      -webkit-backdrop-filter: blur(18px) saturate(140%);
+      box-shadow:
+        inset 0 1px 0 hsl(0 0% 100% / 0.38),
+        0 18px 60px hsl(240 10% 12% / 0.16);
+    }
+
+    .dark .glass-panel {
+      border-color: hsl(0 0% 100% / 0.1);
+      background: hsl(var(--card) / 0.58);
+      box-shadow:
+        inset 0 1px 0 hsl(0 0% 100% / 0.06),
+        0 24px 80px hsl(0 0% 0% / 0.62);
+    }
+
+    .glass-shine {
+      background: linear-gradient(
+        to right,
+        transparent,
+        hsl(var(--primary) / 0.3),
+        transparent
+      );
+      opacity: 0.65;
+    }
+
+    .hero-text-gradient {
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .card-elevated {
+      background: var(--gradient-card);
+      box-shadow: var(--shadow-md);
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+    .card-elevated:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-2px);
+    }
+
+    .dark .card-elevated {
+      background: linear-gradient(
+        180deg,
+        hsl(var(--card) / 0.95) 0%,
+        hsl(240 12% 7% / 0.95) 100%
+      );
+      box-shadow: 0 18px 55px hsl(0 0% 0% / 0.62);
+    }
+
+    /* ✅ Generic Glass */
+    .glass {
+      background: hsl(var(--card) / 0.68);
+      backdrop-filter: blur(16px) saturate(135%);
+      -webkit-backdrop-filter: blur(16px) saturate(135%);
+      border: 1px solid hsl(var(--border) / 0.55);
+      box-shadow:
+        inset 0 1px 0 hsl(0 0% 100% / 0.32),
+        0 14px 55px hsl(240 10% 12% / 0.14);
+    }
+
+    .dark .glass {
+      background: hsl(var(--card) / 0.62);
+      border: 1px solid hsl(0 0% 100% / 0.1);
+      box-shadow:
+        inset 0 1px 0 hsl(0 0% 100% / 0.06),
+        0 18px 70px hsl(0 0% 0% / 0.6);
+    }
+
+    .btn-primary-gradient {
+      background: var(--gradient-primary);
+      @apply text-white font-medium transition-all duration-300;
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-primary-gradient:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-1px);
+    }
+
+    .whatsapp-float {
+      @apply fixed z-50 rounded-full shadow-lg transition-all duration-300;
+      background: #25d366;
+      bottom: 1.5rem;
+      right: 1.5rem;
+    }
+
+    [dir="rtl"] .whatsapp-float {
+      right: auto;
+      left: 1.5rem;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.06);
+      box-shadow: 0 14px 34px rgba(37, 211, 102, 0.35);
+    }
+
+    .section-container {
+      @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    }
+
+    /* Decorative blob (more subtle, luxury) */
+    .decorative-blob {
+      @apply absolute rounded-full blur-3xl;
+      background: radial-gradient(
+        circle at center,
+        hsl(var(--primary) / 0.22) 0%,
+        transparent 60%
+      );
+      opacity: 0.65;
+    }
+
+    .dark .decorative-blob {
+      opacity: 0.55;
+    }
+  }
+
+  /* =========================================================
+    4) UTILITIES (animations + spacing helpers)
+    ========================================================= */
+  @layer utilities {
+    /* Stagger animation utilities */
+    .stagger-1,
+    .stagger-2,
+    .stagger-3,
+    .stagger-4,
+    .stagger-5 {
+      opacity: 0;
+      transform: translateY(14px);
+      animation: heroStagger 0.75s ease-out forwards;
+    }
+
+    .stagger-1 {
+      animation-delay: 0.05s;
+    }
+    .stagger-2 {
+      animation-delay: 0.15s;
+    }
+    .stagger-3 {
+      animation-delay: 0.25s;
+    }
+    .stagger-4 {
+      animation-delay: 0.35s;
+    }
+    .stagger-5 {
+      animation-delay: 0.45s;
+    }
+
+    @keyframes heroStagger {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .stagger-1,
+      .stagger-2,
+      .stagger-3,
+      .stagger-4,
+      .stagger-5 {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    }
+
+    .animate-fade-in {
+      animation: fadeIn 0.5s ease-out forwards;
+    }
+
+    .animate-slide-up {
+      animation: slideUp 0.6s ease-out forwards;
+    }
+
+    .animate-scale-in {
+      animation: scaleIn 0.4s ease-out forwards;
+    }
+
+    .animate-float {
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes scaleIn {
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes float {
+      0%,
+      100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .rtl-space {
+      @apply space-x-4;
+    }
+
+    [dir="rtl"] .rtl-space {
+      @apply space-x-reverse;
+    }
+  }
+
+  /* =========================================================
+    5) Testimonials Marquee (Luxury slider)
+    ========================================================= */
+  .testimonial-marquee {
+    --card-width: 360px;
+    --gap: 18px;
+    --duration: 38s;
+    overflow: hidden;
+  }
+
+  @media (min-width: 768px) {
+    .testimonial-marquee {
+      --card-width: 460px;
+      --gap: 22px;
+      --duration: 42s;
+    }
+  }
+
+  .testimonial-track {
+    display: flex;
+    gap: var(--gap);
+    width: max-content;
+    padding: 18px;
+    animation: t-marquee var(--duration) linear infinite;
+    will-change: transform;
+  }
+
+  .testimonial-marquee:hover .testimonial-track {
+    animation-play-state: paused;
+  }
+
+  .testimonial-card {
+    width: var(--card-width);
+    flex: 0 0 var(--card-width);
+  }
+
+  .testimonial-marquee-ltr .testimonial-track {
+    animation-name: t-marquee-ltr;
+  }
+
+  .testimonial-marquee-rtl .testimonial-track {
+    animation-name: t-marquee-rtl;
+  }
+
+  @keyframes t-marquee-ltr {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-50% - (var(--gap) / 2)));
+    }
+  }
+
+  @keyframes t-marquee-rtl {
+    from {
+      transform: translateX(calc(-50% - (var(--gap) / 2)));
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .testimonial-track {
+      animation: none !important;
+      transform: none !important;
+    }
+  }
+
+  /* =========================================================
+    6) Blog preview marquee
+    ========================================================= */
+  .blog-marquee {
+    --card-width: 320px;
+    --gap: 18px;
+    --duration: 40s;
+  }
+
+  @media (min-width: 768px) {
+    .blog-marquee {
+      --card-width: 420px;
+      --gap: 22px;
+      --duration: 46s;
+    }
+  }
+
+  .blog-track {
+    display: flex;
+    gap: var(--gap);
+    width: max-content;
+    padding: 18px;
+    animation: blog-marquee var(--duration) linear infinite;
+    will-change: transform;
+  }
+
+  .blog-marquee:hover .blog-track {
+    animation-play-state: paused;
+  }
+
+  .blog-card {
+    width: var(--card-width);
+    flex: 0 0 var(--card-width);
+  }
+
+  .blog-marquee-ltr .blog-track {
+    animation-name: blog-marquee-ltr;
+  }
+
+  .blog-marquee-rtl .blog-track {
+    animation-name: blog-marquee-rtl;
+  }
+
+  @keyframes blog-marquee-ltr {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-50% - (var(--gap) / 2)));
+    }
+  }
+
+  @keyframes blog-marquee-rtl {
+    from {
+      transform: translateX(calc(-50% - (var(--gap) / 2)));
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  /* Sleek Admin Sidebar Scrollbar */
+  .sidebar-scrollbar::-webkit-scrollbar {
+    width: 5px;
+  }
+  .sidebar-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .sidebar-scrollbar::-webkit-scrollbar-thumb {
+    background: hsl(var(--muted-foreground) / 0.2);
+    border-radius: 9999px;
+  }
+  .sidebar-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--primary) / 0.5);
+  }
